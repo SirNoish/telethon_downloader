@@ -18,8 +18,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
                 && apt autoremove -y \
                 && rm -rf /var/lib/apt/lists/* \
                 && chmod +x /app/tg_downloader.py \
-                && chown -R 1000:1000 /app
+                && chown -R root:root /app
 
-USER 1000:1000
+USER root:root
 WORKDIR /app
 ENTRYPOINT ["/app/tg_downloader.py"]
