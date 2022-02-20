@@ -26,6 +26,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN [ "cross-build-end" ]
 
-USER 1000:1000
+USER root:root
 WORKDIR /app
 ENTRYPOINT ["/app/tg_downloader.py"]
